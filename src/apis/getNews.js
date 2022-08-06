@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const apiKey = "apiKey=8bfc257b3bbb48faa624c10f66dffb33";
+const apiKey = "apiKey=3a14f3b00f1d4753a5c4a8c4e970a14a";
 
 export const getNews = createApi({
   reducerPath: "reqApiRAWG",
