@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
     Box,
-    Typography,
     Grid,
     Divider,
     Container
 } from "@mui/material";
-import Link from "@mui/material/Link";
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import LoadingPage from "../components/LoadingPage";

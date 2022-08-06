@@ -23,7 +23,7 @@ function MainFeaturedPost(props) {
         clickable: true,
       }}
       autoplay={{
-        delay: 20500,
+        delay: 2500,
         disableOnInteraction: false,
       }}
       modules={[Autoplay, Navigation, Pagination]}

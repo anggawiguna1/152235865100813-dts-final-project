@@ -16,7 +16,7 @@ import { auth } from '../config/firebase';
 
 const SignIn = () => {
     const navigate = useNavigate();
-    const [user, isLoading, error] = useAuthState(auth);
+    const [user, isLoading] = useAuthState(auth);
     const [errorMessage, setErrorMessage] = React.useState('');
 
     useEffect(() => {

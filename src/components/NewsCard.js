@@ -11,8 +11,6 @@ import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import Link from "@mui/material/Link";
-import { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
   
 const NewsCard = ({ title, author, description, url, urlToImage, publishedAt, content }) => {
     return (

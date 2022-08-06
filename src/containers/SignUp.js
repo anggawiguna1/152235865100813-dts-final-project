@@ -16,7 +16,7 @@ import { auth } from '../config/firebase';
 
 const SignUp = () => {
     const navigate = useNavigate();
-    const [user, isLoading, error] = useAuthState(auth);
+    const [user, isLoading] = useAuthState(auth);
     const [errorMessage, setErrorMessage] = useState('')
 
     useEffect(() => {
