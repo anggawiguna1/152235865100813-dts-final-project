@@ -35,45 +35,44 @@ const CateNews = () => {
                         marginTop: "50px",
                         }}
                     >
-                        <Grid container spacing={4}>
-                            {errorListNewsCate ? (
-                            <>Oh no, there was an error : dataListNewsCate</>
-                            ) : isUninitializedListNewsCate ? (
-                            <>Oh no, it's Uninitialized : dataListNewsCate</>
-                            ) : isLoadingListNewsCate ? (
-                                <Box
-                                    sx={{
-                                    marginTop: "100px",
-                                    marginBottom: "50px",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    flex: "1",
-                                    }}
-                                >
-                                    <LoadingPage />
-                                </Box>
-                            ) : dataListNewsCate ? (
-                                <>
+                        {errorListNewsCate ? (
+                        <>Oh no, there was an error : dataListNewsCate</>
+                        ) : isUninitializedListNewsCate ? (
+                        <>Oh no, it's Uninitialized : dataListNewsCate</>
+                        ) : isLoadingListNewsCate ? (
+                            <Box
+                                sx={{
+                                marginTop: "100px",
+                                marginBottom: "50px",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                flex: "1",
+                                }}
+                            >
+                                <LoadingPage />
+                            </Box>
+                        ) : dataListNewsCate ? (
+                            <>
+                                <Grid container spacing={4}>
                                     {dataListNewsCate.articles.map((r, index) => (
                                         <NewsCard key={index} title={r.title} author={r.author} description={r.description} url={r.url} urlToImage={r.urlToImage} publishedAt={r.publishedAt} content={r.content}/>
                                     ))}
-
-                                    <Box 
-                                        sx={{
-                                            marginTop: "20px",
-                                            alignItems: "center",
-                                            justifyContent: "center",
-                                            display: "flex",
-                                        }}
-                                    >
-                                        <Stack spacing={2} >
-                                            <Pagination count={10} variant="outlined" shape="rounded" />
-                                        </Stack>
-                                    </Box>
-                                </>
-                            ) : null}
-                        </Grid>
+                                </Grid>
+                                <Box 
+                                    sx={{
+                                        marginTop: "30px",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        display: "flex",
+                                    }}
+                                >
+                                    <Stack spacing={2} >
+                                        <Pagination count={10} variant="outlined" shape="rounded" />
+                                    </Stack>
+                                </Box>
+                            </>
+                        ) : null}
                      </Box>
                     <Divider sx={{ margin: "1.5em 0em" }} />
                 </main>
